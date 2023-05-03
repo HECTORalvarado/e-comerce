@@ -1,0 +1,18 @@
+.spacer {
+	flex: 1 1 auto;
+}
+
+.switch {
+	text-align: center;
+}
+
+.toolbar {
+	display: fixed;
+}
+
+.sidenav-container {
+	mat-sidenav{
+	 height: calc(100% - 64px);
+	 margin-top: 64px;
+	}
+}

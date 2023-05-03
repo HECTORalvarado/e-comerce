@@ -1,1 +1,145 @@
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use '@angular/material' as mat;
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$ecomerce-primary: mat.define-palette(mat.$indigo-palette);
+$ecomerce-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$ecomerce-warn: mat.define-palette(mat.$red-palette);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$ecomerce-theme: mat.define-light-theme((
+  color: (
+    primary: $ecomerce-primary,
+    accent: $ecomerce-accent,
+    warn: $ecomerce-warn,
+  )
+));
+
+// Custom light theme
+
+// Colors
+
+$custom-red-palette: (
+    50 : #f7e3e3,
+    100 : #ebb9ba,
+    200 : #de8a8c,
+    300 : #d15b5d,
+    400 : #c7383b,
+    500 : #bd1518,//p
+    600 : #b71215,
+    700 : #ae0f11,
+    800 : #a60c0e,
+    900 : #980608,
+    A100 : #ffc4c5,
+    A200 : #ff9192,
+    A400 : #ff5e60,
+    A700 : #ff4547,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #ffffff,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #ffffff,
+    )
+);
+
+$custom-yellow-palette: (
+    50 : #f7f7e3,
+    100 : #ebeab9,
+    200 : #dedd8a,
+    300 : #d1cf5b,
+    400 : #c7c438,
+    500 : #bdba15,
+    600 : #b7b312,
+    700 : #aeab0f,
+    800 : #a6a30c,
+    900 : #989406,
+    A100 : #fffdc4,
+    A200 : #fffb91,
+    A400 : #fff95e,
+    A700 : #fff845,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #000000,
+        600 : #000000,
+        700 : #000000,
+        800 : #000000,
+        900 : #000000,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+$custom-primary: mat.define-palette(mat.$light-blue-palette, 800);
+$custom-accent: mat.define-palette($custom-yellow-palette, 400);
+$custom-warn: mat.define-palette($custom-red-palette, 500);
+
+$ecomerce-light-theme: mat.define-light-theme((
+  color: (
+    primary: $custom-primary,
+    accent: $custom-accent,
+    warn: $custom-warn,
+  )
+));
+
+$ecomerce-dark-theme: mat.define-dark-theme((
+  color: (
+    primary: $custom-primary,
+    accent: $custom-accent,
+    warn: $custom-warn,
+  )
+));
+
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes($ecomerce-light-theme);
+
+.darkMode {
+  @include mat.all-component-themes($ecomerce-dark-theme);
+}
+
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+// Colors
+
+// #0277BD BLUE (main)
+// #BDB915 YELLOW (accent ?)
+// #BD950B YELLOW (accent ?)
+// #0BBD9E Smerald (accent ?)
+// #4EBD0B Green (accent ?)
+// #B915BD Pink (accent ?)
+// #BD151B RED (Warn)

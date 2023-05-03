@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
+import { Component, Inject } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,16 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ecomerce';
+  isDarkTheme : boolean = false;
+
+  constructor (@Inject(DOCUMENT) private document: Document) {}
+
+  onChange(newValue:boolean): void {
+    if (newValue) {
+      this.document.body.classList.add('darkMode');
+    } else {
+      this.document.body.classList.remove('darkMode');
+
+    }
+  }
 }
