@@ -1,0 +1,20 @@
+<h3 class="title">Products</h3>
+<div class="card">
+	<div>
+		<ul>
+			<li *ngFor="let p of products">
+				id: {{p.id}}
+				<br>
+				Codigo: {{p.code}}
+				<br>
+				Nombre: {{p.name}}
+				<br>
+				Disponible: {{p.enable}}
+				<br>
+				Precio: {{p.price}}
+				<br>
+				id Categoria: {{p.product_category_id}}
+			</li>
+		</ul>
+	</div>
+</div>

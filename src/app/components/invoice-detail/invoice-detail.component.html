@@ -1,0 +1,16 @@
+<h3 class="title">Detalle Factura</h3>
+<div class="card">
+	<div>
+		<ul>
+			<li *ngFor="let i of invoiceDetail">
+				id: {{i.id}}
+				<br>
+				Precio: {{i.price}}
+				<br>
+				Cantidad: {{i.quantity}}
+				<br>
+				Total: {{i.total}}
+			</li>
+		</ul>
+	</div>
+</div>

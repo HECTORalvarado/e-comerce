@@ -1,0 +1,14 @@
+<h3 class="title">Detalles del carrito</h3>
+<div class="card">
+	<div>
+		<ul>
+			<li *ngFor="let d of cartDetail">
+				id: {{d.id}}
+				<br>
+				cantidad: {{d.quantity}}
+				<br>
+				total: {{d.total}}
+			</li>
+		</ul>
+	</div>
+</div>

@@ -15,7 +15,7 @@
       <div class="switch">
         <mat-slide-toggle (ngModelChange)="onChange($event)" [(ngModel)]="isDarkTheme">Dark Mode</mat-slide-toggle>
       </div>
-      <button mat-menu-item routerLink="/components/user">
+      <button mat-menu-item routerLink="/pages/user">
           <mat-icon>account_box</mat-icon>
           <span>Mi cuenta</span>
       </button>
@@ -29,16 +29,50 @@
 </div>
   <mat-sidenav-container class="sidenav-container" autosize>
     <mat-sidenav #sidenav style="width: 200px" fixedInViewport="True" mode="over">
-      <button mat-menu-item (click)="sidenav.toggle()" routerLink="/components/home" style="cursor: pointer">
+      <button mat-menu-item (click)="sidenav.toggle()" routerLink="/" style="cursor: pointer">
         <mat-icon>home</mat-icon>
         <span>Home</span>
       </button>
       <mat-divider></mat-divider>
-      <button mat-menu-item (click)="sidenav.toggle()" routerLink="/components/login" style="cursor: pointer">
+      <button mat-menu-item (click)="sidenav.toggle()" routerLink="/pages/login" style="cursor: pointer">
         <mat-icon>insert_drive_file</mat-icon>
         <span>Login</span>
       </button>
       <mat-divider></mat-divider>
+      <button mat-menu-item (click)="sidenav.toggle()" routerLink="/pages/products" style="cursor: pointer">
+        <mat-icon>shopping_basket</mat-icon>
+        <span>Productos</span>
+      </button>
+      <mat-divider></mat-divider>
+      <button mat-menu-item (click)="sidenav.toggle()" routerLink="/pages/categories" style="cursor: pointer">
+        <mat-icon>shopping_basket</mat-icon>
+        <span>Categorias de productos</span>
+      </button>
+      <mat-divider></mat-divider>
+      <button mat-menu-item (click)="sidenav.toggle()" routerLink="/pages/inventory" style="cursor: pointer">
+        <mat-icon>shopping_basket</mat-icon>
+        <span>Inventario de productos</span>
+      </button>
+      <mat-divider></mat-divider>
+      <button mat-menu-item (click)="sidenav.toggle()" routerLink="/pages/orders" style="cursor: pointer">
+        <mat-icon>list_alt</mat-icon>
+        <span>Ordenes</span>
+      </button>
+      <mat-divider></mat-divider>
+      <button mat-menu-item (click)="sidenav.toggle()" routerLink="/pages/cart" style="cursor: pointer">
+        <mat-icon>shopping_cart</mat-icon>
+        <span>Carrito</span>
+      </button>
+      <mat-divider></mat-divider>
+      <button mat-menu-item (click)="sidenav.toggle()" routerLink="/pages/payment" style="cursor: pointer">
+        <mat-icon>shopping_cart</mat-icon>
+        <span>Pagos</span>
+      </button>
+      <mat-divider></mat-divider>
+      <button mat-menu-item (click)="sidenav.toggle()" routerLink="/pages/invoice" style="cursor: pointer">
+        <mat-icon>list_alt</mat-icon>
+        <span>Facturas</span>
+      </button>
     </mat-sidenav>
     <mat-sidenav-content>
       <router-outlet></router-outlet>

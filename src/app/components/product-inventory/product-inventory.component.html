@@ -1,0 +1,12 @@
+<h3 class="title">Inventarios</h3>
+<div class="card">
+	<div>
+		<ul>
+			<li *ngFor="let i of inventory">
+				id: {{i.id}}
+				<br>
+				Cantidad: {{i.quantity}}
+			</li>
+		</ul>
+	</div>
+</div>

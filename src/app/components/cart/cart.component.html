@@ -1,0 +1,13 @@
+<h3 class="title">Carrito</h3>
+<div class="card">
+	<div>
+		<ul>
+			<li *ngFor="let c of cart">
+				id: {{c.id}}
+				<br>
+				Total: {{c.total}}
+			</li>
+		</ul>
+	</div>
+	<button mat-raised-button color="primary" routerLink="/pages/cart-detail">Ver detalles</button>
+</div>

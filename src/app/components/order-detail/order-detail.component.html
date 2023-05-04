@@ -1,0 +1,18 @@
+<h3 class="title">Detalles de las ordenes</h3>
+<div class="card">
+	<div>
+		<ul>
+			<li *ngFor="let d of orderDetail">
+				id: {{d.id}}
+				<br>
+				id del producto: {{d.product_id}}
+				<br>
+				precio: {{d.price}}
+				<br>
+				cantidad: {{d.quantity}}
+				<br>
+				total: {{d.total}}
+			</li>
+		</ul>
+	</div>
+</div>

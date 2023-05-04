@@ -1,0 +1,15 @@
+<h3 class="title">Factura</h3>
+<div class="card">
+	<div>
+		<ul>
+			<li *ngFor="let i of invoice">
+				id: {{i.id}}
+				<br>
+				Codigo: {{i.code}}
+				<br>
+				Total: {{i.total}}
+			</li>
+		</ul>
+	</div>
+	<button mat-raised-button color="primary" routerLink="/pages/invoice-detail">Ver detalles</button>
+</div>

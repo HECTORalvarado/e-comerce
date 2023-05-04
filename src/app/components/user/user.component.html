@@ -1,12 +1,21 @@
-<h3>Usuarios</h3>
-
-<ul>
-	<li *ngFor="let u of users">
-		{{u.id}}
-		{{u.fullname}}
-		{{u.name}}
-		{{u.password}}
-		{{u.email}}
-		{{u.phone}}
+<h3 class="title">Usuarios</h3>
+<div>
+<div>
+	<ul>
+		<li *ngFor="let u of users">
+			id: {{u.id}}
+			<br>
+			Nombre Completo: {{u.fullname}}
+			<br>
+		Nombre: {{u.name}}
+		<br>
+		Contraseña: {{u.password}}
+		<br>
+		Correo electronico: {{u.email}}
+		<br>
+		Telefono: {{u.phone}}
 	</li>
 </ul>
+</div>
+<button mat-raised-button color="primary" routerLink="/pages/address">Direccion</button>
+</div>

@@ -1,0 +1,13 @@
+<h3 class="title">Estado de las ordenes</h3>
+<div class="card">
+	<div>
+		<ul>
+			<li *ngFor="let s of orderStatus">
+				id: {{s.id}}
+				<br>
+				estado: {{s.name}}
+			</li>
+		</ul>
+	</div>
+</div>
+
