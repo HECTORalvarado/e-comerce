@@ -15,13 +15,13 @@
       <div class="switch">
         <mat-slide-toggle (ngModelChange)="onChange($event)" [(ngModel)]="isDarkTheme">Dark Mode</mat-slide-toggle>
       </div>
-      <button mat-menu-item routerLink="/account">
+      <button mat-menu-item routerLink="/components/user">
           <mat-icon>account_box</mat-icon>
-          <span>My account</span>
+          <span>Mi cuenta</span>
       </button>
       <button mat-menu-item (click)="sidenav.opened = false" >
         <mat-icon>exit_to_app</mat-icon>
-        <span>Logout</span>
+        <span>cerrar sesion</span>
       </button>
   </mat-menu>
   </mat-toolbar>
