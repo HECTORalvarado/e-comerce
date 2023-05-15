@@ -9,18 +9,18 @@ import { UserService } from 'src/app/service/user.service';
 })
 export class UserComponent implements OnInit {
 
+  // se inicia una variable user con el modelo User
   users : User[] = [];
-
+  //se llama al servicio userService
   constructor(private userService : UserService) { }
 
   ngOnInit(): void {
-    //this.userService.findAll().subscribe(data => data);
-    this.userService.findAll().subscribe((data:any) => {
+    //llama a la funcion findAll del servidor y usa el metodo suscribe en el
+    this.userService.findAll().subscribe(
+    //Funcion tipo flecha en la que se asignan los datos a la variable user
+      (data:any) => {
       this.users= data.result;
-      //console.log(this.usuarios);
     });
-    //this.userService.findAllDos().subscribe(data => this.user = data);
-    console.log(this.users);
   }
 
 }

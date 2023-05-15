@@ -4,6 +4,7 @@
 
 export const environment = {
   production: false,
+  //variables de entorno
   HOST: 'http://localhost:8000/api'
 };
 

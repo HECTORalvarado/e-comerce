@@ -2,11 +2,13 @@
 <div>
 <div>
 	<ul>
-		<li *ngFor="let u of users">
-			id: {{u.id}}
-			<br>
-			Nombre Completo: {{u.fullname}}
-			<br>
+	<!-- ngFor para recorrer los elementos de user -->
+	<li *ngFor="let u of users">
+	<!-- se imprimen los valores de users -->
+		id: {{u.id}}
+		<br>
+		Nombre Completo: {{u.fullname}}
+		<br>
 		Nombre: {{u.name}}
 		<br>
 		Contraseña: {{u.password}}

@@ -9,10 +9,12 @@ import { User } from 'src/app/models/user';
   providedIn: 'root'
 })
 export class UserService {
-  
-  private url : string = `${environment.HOST}/user/`;
 
+  // direccion del recurso de la api
+  private url : string = `${environment.HOST}/user/`;
+  // constructor para acceder a los metodos http
   constructor(private http: HttpClient) { }
+  // funcion que obtiene los datos de la api
   findAll() {
     return this.http.get<Response>(this.url);
   }
