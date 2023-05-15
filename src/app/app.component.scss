@@ -48,10 +48,3 @@
 	position: sticky;
 	height: 64px;
 }
-
-.sidenav-container {
-	mat-sidenav{
-	 height: calc(100% - 64px);
-	 margin-top: 64px;
-	}
-}

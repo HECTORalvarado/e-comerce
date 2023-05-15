@@ -8,6 +8,7 @@ import { FormsModule } from '@angular/forms'
 import { MaterialModule } from './models/material.module';
 import { HttpClientModule } from '@angular/common/http';
 
+
 // Components
 import { UserComponent } from './components/user/user.component';
 import { ProductsComponent } from './components/products/products.component';
@@ -22,6 +23,7 @@ import { PaymentComponent } from './components/payment/payment.component';
 import { InvoiceComponent } from './components/invoice/invoice.component';
 import { InvoiceDetailComponent } from './components/invoice-detail/invoice-detail.component';
 import { AddressComponent } from './components/address/address.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -46,6 +48,7 @@ import { AddressComponent } from './components/address/address.component';
     BrowserAnimationsModule,
     FormsModule,
     HttpClientModule,
+    FontAwesomeModule,
     MaterialModule
   ],
   providers: [],
