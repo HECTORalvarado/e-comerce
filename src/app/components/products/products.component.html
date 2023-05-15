@@ -1,20 +1,25 @@
-<h3 class="title">Products</h3>
+<h3 class="title">Productos</h3>
 <div class="card">
-	<div>
-		<ul>
-			<li *ngFor="let p of products">
-				id: {{p.id}}
-				<br>
-				Codigo: {{p.code}}
-				<br>
-				Nombre: {{p.name}}
-				<br>
-				Disponible: {{p.enable}}
-				<br>
-				Precio: {{p.price}}
-				<br>
-				id Categoria: {{p.product_category_id}}
-			</li>
-		</ul>
+	<div class="productCard" *ngFor="let p of products">
+		<img src="../../../assets/img/headset.webp" alt="headset">
+		<p class="productTitle">
+			{{p.name | titlecase}}
+		</p>
+		<p>
+			Codigo: {{p.code}}
+		</p>
+		<p *ngIf="p.enable">
+			Disponible: Sí
+		</p>
+		<p *ngIf="!p.enable">
+			Disponible: No
+		</p>
+		<p>
+			Precio <span class="price">${{p.price}}</span>
+		</p>
+		<p>
+			Categoria: {{p.category.name}}
+		</p>
+		<button mat-raised-button color="primary">Añadir al carrito</button>
 	</div>
 </div>

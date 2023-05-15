@@ -4,3 +4,36 @@
 	font-weight: bold;
 	font-size: 1.5rem;
 }
+
+.card {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 1rem;
+	padding: 40px;
+}
+
+.productCard {
+	height: 445px;
+	padding: 0 20px;
+	text-align: center;
+	font-size: 1rem;
+	background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+	backdrop-filter: blur(20px);
+	box-shadow: 0 8px 22px 0 rgba(0, 0, 0, 0.37);
+	border: 1px solid rgba(255, 255, 255, 0.18);
+	border-radius: 32px;
+	img {
+		max-height: 45%;
+	}
+}
+
+.productTitle {
+	font-size: 1.2rem;
+	font-weight: bold;
+}
+
+.price {
+	font-weight: 500;
+	letter-spacing: 0.04rem;
+	color: rgb(0, 167, 167);
+}
