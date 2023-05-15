@@ -1,3 +1,5 @@
+import { productCategory } from "./productCategories";
+
 export class Product {
 	id: number;
 	code: string;
@@ -5,5 +7,5 @@ export class Product {
 	enable: boolean;
 	product_category_id: number;
 	price: number;
-	category: {};
+	category: productCategory;
 }
