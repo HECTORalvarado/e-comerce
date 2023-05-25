@@ -13,6 +13,7 @@ import { PaymentComponent } from './components/payment/payment.component';
 import { InvoiceComponent } from './components/invoice/invoice.component';
 import { InvoiceDetailComponent } from './components/invoice-detail/invoice-detail.component';
 import { AddressComponent } from './components/address/address.component';
+import { LoginComponent } from './components/login/login.component';
 
 const routes: Routes = [
   {path: 'pages/user', component:UserComponent},
@@ -27,7 +28,8 @@ const routes: Routes = [
   {path: 'pages/cart-detail', component:CartDetailComponent},
   {path: 'pages/payment', component:PaymentComponent},
   {path: 'pages/invoice', component:InvoiceComponent},
-  {path: 'pages/invoice-detail', component:InvoiceDetailComponent}
+  {path: 'pages/invoice-detail', component:InvoiceDetailComponent},
+  {path: 'pages/login', component:LoginComponent}
 ];
 
 @NgModule({

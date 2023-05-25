@@ -7,7 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms'
 import { MaterialModule } from './shared/material.module';
 import { HttpClientModule } from '@angular/common/http';
-
+import { ReactiveFormsModule} from '@angular/forms';
 
 // Components
 import { UserComponent } from './components/user/user.component';
@@ -24,6 +24,7 @@ import { InvoiceComponent } from './components/invoice/invoice.component';
 import { InvoiceDetailComponent } from './components/invoice-detail/invoice-detail.component';
 import { AddressComponent } from './components/address/address.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [
@@ -40,13 +41,15 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     PaymentComponent,
     InvoiceComponent,
     InvoiceDetailComponent,
-    AddressComponent
+    AddressComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpClientModule,
     FontAwesomeModule,
     MaterialModule
