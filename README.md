@@ -30,6 +30,7 @@ A continuacion se presentara un arbol con la estructura del proyecto en el que s
 │   ├── components
 │	├── models
 │	├── service
+│	├── shared
 │	├── app.routing.module.ts
 │	├── app.component.html
 │	├── app.component.scss
