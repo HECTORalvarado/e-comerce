@@ -1,23 +1,20 @@
 <h3 class="title">Usuarios</h3>
 <div>
-<div>
-	<ul>
-	<!-- ngFor para recorrer los elementos de user -->
-	<li *ngFor="let u of users">
-	<!-- se imprimen los valores de users -->
-		id: {{u.id}}
-		<br>
-		Nombre Completo: {{u.fullname}}
-		<br>
-		Nombre: {{u.name}}
-		<br>
-		Contraseña: {{u.password}}
-		<br>
-		Correo electronico: {{u.email}}
-		<br>
-		Telefono: {{u.phone}}
-	</li>
-</ul>
-</div>
-<button mat-raised-button color="primary" routerLink="/pages/address">Direccion</button>
+	<div>
+		<ul>
+			<!-- ngFor para recorrer los elementos de user -->
+			<li *ngFor="let u of users">
+				<!-- se imprimen los valores de users -->
+				Nombre Completo: {{u.fullname}}
+				<br>
+				Nombre: {{u.name}}
+				<br>
+				Correo electronico: {{u.email}}
+				<br>
+				Telefono: {{u.phone}}
+				<hr>
+			</li>
+			<button mat-raised-button color="primary" routerLink="/pages/address">Direccion</button>
+		</ul>
+	</div>
 </div>

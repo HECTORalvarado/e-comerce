@@ -54,7 +54,8 @@
       </button>
       <mat-divider></mat-divider>
       <button mat-menu-item (click)="sidenav.toggle()" routerLink="/pages/inventory" style="cursor: pointer">
-        <fa-icon [icon]="warehouse" [styles]="{'stroke': 'rgba(0,0,0,0.54)', 'color': 'rgba(0,0,0,0.54)'}" [fixedWidth]="true" size="lg"></fa-icon> 
+        <fa-icon *ngIf="!isDarkTheme" [icon]="warehouse" [styles]="{'stroke': 'rgba(0,0,0,0.54)', 'color': 'rgba(0,0,0,0.54)'}" [fixedWidth]="true" size="lg"></fa-icon> 
+        <fa-icon *ngIf="isDarkTheme" [icon]="warehouse" [styles]="{'stroke': 'rgba(255,255,255, 1)', 'color': 'rgba(255,255,255, 1)'}" [fixedWidth]="true" size="lg"></fa-icon> 
         <span> &nbsp;&nbsp;&nbsp;&nbsp;
           Inventario de productos</span>
       </button>
