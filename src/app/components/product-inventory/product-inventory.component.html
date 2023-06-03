@@ -1,12 +1,15 @@
-<h3 class="title">Inventarios</h3>
+<h3 class="title">Inventario</h3>
 <div class="card">
 	<div>
-		<ul>
-			<li *ngFor="let i of inventory">
-				id: {{i.id}}
+		<div>
+			<div *ngFor="let i of inventory">
+				Producto: {{i.product.name}}
+				<br>
+				Categoria: {{i.product.category.name}}
 				<br>
 				Cantidad: {{i.quantity}}
-			</li>
-		</ul>
+				<hr>
+			</div>
+		</div>
 	</div>
 </div>
