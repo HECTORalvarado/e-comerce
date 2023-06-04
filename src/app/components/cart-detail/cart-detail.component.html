@@ -1,14 +1,11 @@
-<h3 class="title">Detalles del carrito</h3>
-<div class="card">
-	<div>
-		<ul>
-			<li *ngFor="let d of cartDetail">
-				id: {{d.id}}
-				<br>
-				cantidad: {{d.quantity}}
-				<br>
-				total: {{d.total}}
-			</li>
-		</ul>
+<h3 class="title">
+	Carrito de compras
+</h3>
+<div class="container">
+	<div class="card" *ngFor="let d of Cartproducts">
+		<p>producto: {{d.name}}</p>
+		<p>cantidad: {{quantity}}</p>
+		<p>precio: {{d.price}}</p>
+		<button mat-raised-button color="warn" (click)="eliminarProducto(d.id)">Eliminar Producto</button>
 	</div>
 </div>

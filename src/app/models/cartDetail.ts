@@ -1,7 +1,10 @@
+import { Cart } from "./cart";
+import { Product } from "./product";
+
 export class CartDetail {
 	id: number;
-	cart_id: number;
-	product_id: number;
 	quantity: number;
 	total: number;
+	cart: Cart;
+	product: Product;
 }

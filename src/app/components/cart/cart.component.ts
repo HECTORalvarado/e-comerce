@@ -16,6 +16,7 @@ export class CartComponent implements OnInit {
   ngOnInit(): void {
     this.cartService.findAll().subscribe((data:any) => {
       this.cart = data.result;
+      console.log(this.cart[0]);
     });
   }
 

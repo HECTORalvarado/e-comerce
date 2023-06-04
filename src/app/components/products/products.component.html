@@ -20,6 +20,6 @@
 		<p>
 			Categoria: {{p.category.name}}
 		</p>
-		<button mat-raised-button color="primary">Añadir al carrito</button>
+		<button mat-raised-button color="primary" (click)="addProduct(p.id)">Añadir al carrito</button>
 	</div>
 </div>

@@ -5,6 +5,11 @@
       <mat-icon *ngIf="sidenav.opened">close</mat-icon>
     </button>
     <h1>Ecomerce</h1>
+    <mat-divider></mat-divider>
+      <button mat-button (click)="verCarrito()" style="cursor: pointer">
+        <mat-icon>shopping_cart</mat-icon>
+        <span>Carrito</span>
+      </button>
     <span class="spacer"></span>
 
     <button mat-icon-button [matMenuTriggerFor]="menu">
@@ -63,11 +68,6 @@
       <button mat-menu-item (click)="sidenav.toggle()" routerLink="/pages/orders" style="cursor: pointer">
         <mat-icon>list_alt</mat-icon>
         <span>Ordenes</span>
-      </button>
-      <mat-divider></mat-divider>
-      <button mat-menu-item (click)="sidenav.toggle()" routerLink="/pages/cart" style="cursor: pointer">
-        <mat-icon>shopping_cart</mat-icon>
-        <span>Carrito</span>
       </button>
       <mat-divider></mat-divider>
       <button mat-menu-item (click)="sidenav.toggle()" routerLink="/pages/payment" style="cursor: pointer">
