@@ -26,6 +26,7 @@ import { InvoiceDetailComponent } from './components/invoice-detail/invoice-deta
 import { AddressComponent } from './components/address/address.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { LoginComponent } from './components/login/login.component';
+import { AdministrationComponent } from './components/administration/administration.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { LoginComponent } from './components/login/login.component';
     InvoiceComponent,
     InvoiceDetailComponent,
     AddressComponent,
-    LoginComponent
+    LoginComponent,
+    AdministrationComponent
   ],
   imports: [
     BrowserModule,

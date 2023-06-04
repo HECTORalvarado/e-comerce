@@ -1,4 +1,5 @@
 <div class="example-container">
+  <!-- Header -->
   <mat-toolbar color="primary" class="toolbar">
     <button mat-icon-button (click)="sidenav.toggle()">
       <mat-icon *ngIf="!sidenav.opened">menu_open</mat-icon>
@@ -11,7 +12,7 @@
         <span>Carrito</span>
       </button>
     <span class="spacer"></span>
-
+    <!-- Menu de opciones del usuario -->
     <button mat-icon-button [matMenuTriggerFor]="menu">
           <mat-icon>more_vert</mat-icon>
     </button>
@@ -24,13 +25,17 @@
           <mat-icon>account_box</mat-icon>
           <span>Mi cuenta</span>
       </button>
+      <button mat-menu-item routerLink="/pages/administration">
+        <mat-icon>account_box</mat-icon>
+        <span>Administración</span>
+    </button>
       <button mat-menu-item (click)="sidenav.opened = false" >
         <mat-icon>exit_to_app</mat-icon>
         <span>cerrar sesion</span>
       </button>
   </mat-menu>
   </mat-toolbar>
-
+<!-- Sidenav -->
 </div>
   <mat-sidenav-container class="sidenav-container" autosize>
     <mat-sidenav #sidenav style="width: 200px" fixedInViewport="True" mode="side">
@@ -58,27 +63,7 @@
         <span>Categorias de productos</span>
       </button>
       <mat-divider></mat-divider>
-      <button mat-menu-item (click)="sidenav.toggle()" routerLink="/pages/inventory" style="cursor: pointer">
-        <fa-icon *ngIf="!isDarkTheme" [icon]="warehouse" [styles]="{'stroke': 'rgba(0,0,0,0.54)', 'color': 'rgba(0,0,0,0.54)'}" [fixedWidth]="true" size="lg"></fa-icon> 
-        <fa-icon *ngIf="isDarkTheme" [icon]="warehouse" [styles]="{'stroke': 'rgba(255,255,255, 1)', 'color': 'rgba(255,255,255, 1)'}" [fixedWidth]="true" size="lg"></fa-icon> 
-        <span> &nbsp;&nbsp;&nbsp;&nbsp;
-          Inventario de productos</span>
-      </button>
-      <mat-divider></mat-divider>
-      <button mat-menu-item (click)="sidenav.toggle()" routerLink="/pages/orders" style="cursor: pointer">
-        <mat-icon>list_alt</mat-icon>
-        <span>Ordenes</span>
-      </button>
-      <mat-divider></mat-divider>
-      <button mat-menu-item (click)="sidenav.toggle()" routerLink="/pages/payment" style="cursor: pointer">
-        <mat-icon>credit_card</mat-icon>
-        <span>Pagos</span>
-      </button>
-      <mat-divider></mat-divider>
-      <button mat-menu-item (click)="sidenav.toggle()" routerLink="/pages/invoice" style="cursor: pointer">
-        <mat-icon>list_alt</mat-icon>
-        <span>Facturas</span>
-      </button>
+      
     </mat-sidenav>
     <mat-sidenav-content>
       <router-outlet></router-outlet>

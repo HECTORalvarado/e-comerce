@@ -1,0 +1,40 @@
+<p>
+	<mat-toolbar color="accent">
+	  <span>Panel de administración</span>
+	  <span class="spacer"></span>
+	  <div>
+		<button mat-button (click)="comprobarComponente(1)" style="cursor: pointer">
+			<fa-icon [icon]="warehouse" [styles]="{'stroke': 'rgba(0,0,0,0.54)', 'color': 'rgba(0,0,0,0.54)'}" [fixedWidth]="true" size="lg"></fa-icon> 
+			<!--
+				<fa-icon *ngIf="isDarkTheme" [icon]="warehouse" [styles]="{'stroke': 'rgba(255,255,255, 1)', 'color': 'rgba(255,255,255, 1)'}" [fixedWidth]="true" size="lg"></fa-icon> 
+			-->
+			<span> &nbsp;&nbsp;&nbsp;&nbsp;
+			  Inventario de productos</span>
+		  </button>
+		  <button mat-button (click)="comprobarComponente(2)" style="cursor: pointer">
+			<mat-icon>list_alt</mat-icon>
+			<span>Ordenes</span>
+		  </button>
+		  <button mat-button (click)="comprobarComponente(3)"  style="cursor: pointer">
+			<mat-icon>credit_card</mat-icon>
+			<span>Pagos</span>
+		  </button>
+		  <button mat-button (click)="comprobarComponente(4)" style="cursor: pointer">
+			<mat-icon>list_alt</mat-icon>
+			<span>Facturas</span>
+		  </button>
+	  </div>
+	</mat-toolbar>
+  </p>
+<div *ngIf="componente == 1">
+	<app-product-inventory></app-product-inventory>
+</div>
+<div *ngIf="componente == 2">
+	<app-orders></app-orders>
+</div>
+<div *ngIf="componente == 3">
+	<app-payment></app-payment>
+</div>
+<div *ngIf="componente == 4">
+	<app-invoice></app-invoice>
+</div>
