@@ -18,5 +18,7 @@ export class ProductCategoriesComponent implements OnInit {
       this.categories = data.result;
     });
   }
+  searchProduct(product:number) {
 
+  }
 }

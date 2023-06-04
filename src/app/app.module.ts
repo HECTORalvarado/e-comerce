@@ -8,6 +8,7 @@ import { FormsModule } from '@angular/forms'
 import { MaterialModule } from './shared/material.module';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule} from '@angular/forms';
+import { NgOptimizedImage } from '@angular/common'
 
 // Components
 import { UserComponent } from './components/user/user.component';
@@ -51,6 +52,7 @@ import { LoginComponent } from './components/login/login.component';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    NgOptimizedImage,
     FontAwesomeModule,
     MaterialModule
   ],

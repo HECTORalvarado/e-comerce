@@ -1,12 +1,58 @@
 <h3 class="title">Categorias</h3>
-<div class="card">
-	<div>
-		<ul>
-			<li *ngFor="let c of categories">
-				id: {{c.id}}
-				<br>
-				Categoria: {{c.name}}
-			</li>
-		</ul>
+<div class="container">
+	<div class="card" (click)="searchProduct(1)">
+		<picture>
+			<img ngSrc="../../../assets/img/keyboard.jpg" width="400" height="250">
+			<img ngSrc="../../../assets/img/keyboard.jpg" ngSrcset="">
+		</picture>
+		<p>
+			Perifericos
+		</p>
+	</div>
+	<div class="card" (click)="searchProduct(2)">
+		<img ngSrc="../../../assets/img/headset.jpg" width="400" height="250">
+		<p>
+			Audio
+		</p>
+	</div>
+	<div class="card" (click)="searchProduct(3)">
+		<img ngSrc="../../../assets/img/display.jpg" width="400" height="250">
+		<p>
+			Pantallas
+		</p>
+	</div>
+	<div class="card" (click)="searchProduct(4)">
+		<img ngSrc="../../../assets/img/storage.jpg" width="400" height="250">
+		<p>
+			Almacenamiento
+		</p>
+	</div>
+	<div class="card" (click)="searchProduct(5)">
+		<img ngSrc="../../../assets/img/keyboard.jpg" width="400" height="250">
+		<p>
+			Perifericos
+		</p>
+	</div>
+	<div class="card" (click)="searchProduct(6)">
+		<img ngSrc="../../../assets/img/headset.jpg" width="400" height="250">
+		<p>
+			Perifericos
+		</p>
 	</div>
 </div>
+
+
+
+<!--
+-------- ATRIBUCIONES -----------
+
+<a href="https://www.freepik.es/foto-gratis/oficina-vacia-arquitectos-computadora-escritorio_16844384.htm#query=monitor&position=7&from_view=search&track=sph">Imagen de DCStudio</a> en Freepik
+
+Photo by <a href="https://unsplash.com/de/@chrisjdavis?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Chris J. Davis</a> on <a href="https://unsplash.com/backgrounds/phone/keyboard?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+  
+Photo by <a href="https://unsplash.com/@claudiamanas?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Claudia Mañas</a> on <a href="https://unsplash.com/photos/uc1O7d4xBJc?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+
+Photo by <a href="https://unsplash.com/@artwall_hd?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Art Wall - Kittenprint</a> on <a href="https://unsplash.com/photos/9Wq1HpghQ4A?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+  
+
+-->
