@@ -3,28 +3,31 @@
 		<h3>Añadir Productos</h3>
 		<mat-form-field class="example-full-width" appearance="standard">
 			<mat-label>Nombre</mat-label>
-			<input matInput type="text">
+			<input matInput type="text" [(ngModel)]="productName" name="productName">
 		</mat-form-field>
-		
+
 		<mat-form-field class="example-full-width" appearance="standard">
 			<mat-label>Precio</mat-label>
-			<input matInput>
+			<input matInput type="number" [(ngModel)]="productPrice" name="productPrice">
+		</mat-form-field>
+
+		<mat-form-field appearance="standard">
+			<mat-label>Descripción</mat-label>
+			<input matInput type="text" [(ngModel)]="productDescription" name="productDescription">
 		</mat-form-field>
 
 		<mat-form-field class="example-full-width" appearance="standard">
 			<mat-label>Categoria</mat-label>
-			<input matInput placeholder="Ex. pat@example.com">
+			<mat-select [(ngModel)]="selectedValue" name="productCategory">
+				<mat-option *ngFor="let category of categorias" [value]="category.value">
+					{{category.viewValue}}
+				</mat-option>
+			</mat-select>
 		</mat-form-field>
 
-		<mat-form-field appearance="standard">
-			<mat-label>Contraseña</mat-label>
-			<input matInput type="text">
-		</mat-form-field>
+			<button type="button" mat-raised-button (click)="fileInput.click()">Seleccionar imagen</button>
+			<input hidden (change)="onFileSelected()" #fileInput type="file" id="file" [(ngModel)]="productImage" name="productImage">
 
-		<mat-form-field class="example-full-width" appearance="standard">
-			<mat-label>Codigo:</mat-label>
-			<input type="text" matInput placeholder="ITEM-00000000N" minlength="9">
-		</mat-form-field>
-		<button mat-raised-button color="primary">Agregar</button>
+		<button mat-raised-button color="primary" (click)="agregarProducto()">Agregar</button>
 	</form>
 </div>
