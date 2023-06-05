@@ -1,3 +1,5 @@
+import { OrderStatus } from "./orderStatus";
+
 export class Order {
 	id: number;
 	code: string;
@@ -6,4 +8,5 @@ export class Order {
 	description: string;
 	user_id: number;
 	address_id: number;
+	orderStatus: OrderStatus;
 }

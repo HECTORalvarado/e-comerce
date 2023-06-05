@@ -1,3 +1,5 @@
+import { Product } from "./product";
+
 export class OrderDetail {
 	id: number;
 	order_id: number;
@@ -5,4 +7,5 @@ export class OrderDetail {
 	price: number;
 	quantity: number;
 	total: number;
+	product: Product;
 }

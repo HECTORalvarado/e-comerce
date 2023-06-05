@@ -15,6 +15,7 @@ import { InvoiceDetailComponent } from './components/invoice-detail/invoice-deta
 import { AddressComponent } from './components/address/address.component';
 import { LoginComponent } from './components/login/login.component';
 import { AdministrationComponent } from './components/administration/administration.component';
+import { AddProductComponent } from './components/add-product/add-product.component';
 
 const routes: Routes = [
   {path: 'pages/user', component:UserComponent},
@@ -31,7 +32,9 @@ const routes: Routes = [
   {path: 'pages/invoice', component:InvoiceComponent},
   {path: 'pages/invoice-detail', component:InvoiceDetailComponent},
   {path: 'pages/login', component:LoginComponent},
-  {path: 'pages/administration', component:AdministrationComponent}
+  {path: 'pages/administration', component:AdministrationComponent},
+  {path: 'pages/addPoducts', component: AddProductComponent}
+
 ];
 
 @NgModule({

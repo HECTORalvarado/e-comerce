@@ -1,21 +1,24 @@
 <h3 class="title">Ordenes</h3>
-<div class="card">
-	<div>
-		<ul>
-			<li *ngFor="let o of order">
-				id: {{o.id}}
-				<br>
-				Codigo: {{o.code}}
-				<br>
-				Total: {{o.total}}
-				<br>
-				Descripción: {{o.description}}
-				<br>
-			</li>
-		</ul>
+<div class="container">
+	<div class="card" *ngFor="let o of order">
+		<p>
+			id: {{o.id}}
+		</p>
+		<p>
+			Codigo: {{o.code}}
+		</p>
+		<p>
+			Estado: {{o.orderStatus.name}}
+		</p>
+		<p>
+			Descripción: {{o.description}}
+		</p>
+		<p>
+		Total: {{o.total}}
+		</p>
 	</div>
 	<div>
-	<button mat-raised-button color="primary" routerLink="/pages/order-detail">Ver detalles</button>
-	<button mat-raised-button color="accent" routerLink="/pages/order-status">Ver estado de la orden</button>
+		<button mat-raised-button color="primary" routerLink="/pages/order-detail">Ver detalles</button>
+		<button mat-raised-button color="accent" routerLink="/pages/order-status">Ver estado de la orden</button>
 	</div>
 </div>

@@ -23,6 +23,14 @@
 			<mat-icon>list_alt</mat-icon>
 			<span>Facturas</span>
 		  </button>
+		  <button mat-button (click)="comprobarComponente(5)" style="cursor: pointer">
+			<mat-icon>list_alt</mat-icon>
+			<span>Añadir producto</span>
+		  </button>
+		  <button mat-button (click)="comprobarComponente(6)" style="cursor: pointer">
+			<mat-icon>list_alt</mat-icon>
+			<span>Editar Usuario</span>
+		  </button>
 	  </div>
 	</mat-toolbar>
   </p>
@@ -37,4 +45,7 @@
 </div>
 <div *ngIf="componente == 4">
 	<app-invoice></app-invoice>
+</div>
+<div *ngIf="componente == 5">
+	<app-add-product></app-add-product>
 </div>

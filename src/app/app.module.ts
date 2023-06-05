@@ -27,6 +27,7 @@ import { AddressComponent } from './components/address/address.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { LoginComponent } from './components/login/login.component';
 import { AdministrationComponent } from './components/administration/administration.component';
+import { AddProductComponent } from './components/add-product/add-product.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { AdministrationComponent } from './components/administration/administrat
     InvoiceDetailComponent,
     AddressComponent,
     LoginComponent,
-    AdministrationComponent
+    AdministrationComponent,
+    AddProductComponent
   ],
   imports: [
     BrowserModule,

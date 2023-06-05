@@ -16,6 +16,7 @@ export class OrdersComponent implements OnInit {
   ngOnInit(): void {
     this.orderService.findAll().subscribe((data:any) => {
       this.order = data.result;
+      console.log(this.order);
     });
   }
 
