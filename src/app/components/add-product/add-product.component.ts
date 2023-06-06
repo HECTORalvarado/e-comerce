@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroupDirective, NgForm, Validators } from '@angular/forms';
 import { ProductsService } from 'src/app/service/products.service';
 
 interface Categoria {

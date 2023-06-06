@@ -8,7 +8,8 @@ import { FormsModule } from '@angular/forms'
 import { MaterialModule } from './shared/material.module';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule} from '@angular/forms';
-import { NgOptimizedImage } from '@angular/common'
+import { NgOptimizedImage } from '@angular/common';
+import { NgxPayPalModule } from "ngx-paypal";
 
 // Components
 import { UserComponent } from './components/user/user.component';
@@ -57,6 +58,7 @@ import { AddProductComponent } from './components/add-product/add-product.compon
     ReactiveFormsModule,
     HttpClientModule,
     NgOptimizedImage,
+    NgxPayPalModule,
     FontAwesomeModule,
     MaterialModule
   ],
