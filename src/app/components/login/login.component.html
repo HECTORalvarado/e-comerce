@@ -1,3 +1,6 @@
+<asl-google-signin-button *ngIf="!user" type='standard' theme="filled_blue" shape="pill"
+	size="large"></asl-google-signin-button>
+
 <div class="container">
 	<form class=" form form-login">
 		<h2>Iniciar session</h2>
@@ -28,17 +31,17 @@
 		<h2>Registrarse</h2>
 		<mat-form-field class="example-full-width" appearance="standard">
 			<mat-label>Nombre</mat-label>
-			<input matInput>
+			<input matInput [(ngModel)]="name" name="name">
 		</mat-form-field>
 		<mat-form-field class="example-full-width" appearance="standard">
 			<mat-label>Apellido</mat-label>
-			<input matInput>
+			<input matInput [(ngModel)]="lastName" name="lastName">
 		</mat-form-field>
 
 		<mat-form-field class="example-full-width" appearance="standard">
 			<mat-label>Email</mat-label>
 			<input type="email" matInput [formControl]="email" [errorStateMatcher]="matcher"
-				placeholder="Ex. pat@example.com">
+				placeholder="Ex. pat@example.com" name="email">
 			<mat-error *ngIf="email.hasError('email') && !email.hasError('required')">
 				Please enter a valid email address
 			</mat-error>
@@ -49,7 +52,7 @@
 
 		<mat-form-field appearance="standard">
 			<mat-label>Contraseña</mat-label>
-			<input matInput [type]="hide ? 'password' : 'text'" class="password">
+			<input matInput [type]="hide ? 'password' : 'text'" class="password" [(ngModel)]="password" name="password">
 			<button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
 				[attr.aria-pressed]="hide">
 				<mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
@@ -58,8 +61,8 @@
 
 		<mat-form-field class="example-full-width" appearance="standard">
 			<mat-label>Telefono</mat-label>
-			<input type="tel" matInput placeholder="2222-2222" minlength="9">
+			<input type="tel" matInput [(ngModel)]="phone" placeholder="2222-2222" minlength="9" maxlength="9" name="phone">
 		</mat-form-field>
-		<button mat-raised-button color="primary">Registrarse</button>
+		<button mat-raised-button color="primary" type="submit" (click)="singUp()">Registrarse</button>
 	</form>
 </div>
