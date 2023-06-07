@@ -16,9 +16,11 @@ import { AddressComponent } from './components/address/address.component';
 import { LoginComponent } from './components/login/login.component';
 import { AdministrationComponent } from './components/administration/administration.component';
 import { AddProductComponent } from './components/add-product/add-product.component';
+import { GuardGuard } from './guard.guard';
+import { AdminGuard } from './admin.guard';
 
 const routes: Routes = [
-  {path: 'pages/user', component:UserComponent},
+  {path: 'pages/user', component:UserComponent, canActivate:[GuardGuard]},
   {path: 'pages/address', component:AddressComponent},
   {path: 'pages/orders', component:OrdersComponent},
   {path: 'pages/order-status', component:OrderStatusComponent},

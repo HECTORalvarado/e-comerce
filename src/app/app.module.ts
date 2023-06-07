@@ -11,10 +11,11 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { NgOptimizedImage } from '@angular/common';
 import { NgxPayPalModule } from "ngx-paypal";
 import {
-  SocialLoginModule, SocialAuthServiceConfig,
+  SocialLoginModule, 
+  SocialAuthServiceConfig,
   GoogleLoginProvider,
-  GoogleSigninButtonDirective,
 } from '@abacritt/angularx-social-login';
+import { CookieService } from 'ngx-cookie-service';
 
 // Components
 import { UserComponent } from './components/user/user.component';
@@ -86,7 +87,8 @@ import { AddProductComponent } from './components/add-product/add-product.compon
           console.error(err);
         }
       } as SocialAuthServiceConfig,
-    }
+    },
+    CookieService
   ],
   bootstrap: [AppComponent]
 })

@@ -22,7 +22,7 @@ export class ProductsService {
     const headers = new HttpHeaders({
       
       'Content-Type': 'application/json',
-      'Access-Control-Allow-Origin': '*'
+    
     });
   
     const body = {

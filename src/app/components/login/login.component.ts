@@ -52,7 +52,7 @@ export class LoginComponent implements OnInit {
   }
 
   singIn() {
-    
+    this.userService.loginUser(this.email.value, this.password);
   }
 
 }
